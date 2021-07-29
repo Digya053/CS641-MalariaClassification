@@ -78,12 +78,9 @@ def plot_roc_auc_curve(true_label, predictions):
 	train_fpr, train_tpr, _ = roc_curve(true_label, predictions, pos_label=1)
 	# plot the roc curve for the model
 	plt.plot(train_fpr, train_tpr, linestyle='--', label='Train')
-	# axis labels
 	plt.xlabel('False Positive Rate')
 	plt.ylabel('True Positive Rate')
-	# show the legend
 	plt.legend()
-	# show the plot
 	plt.show()
 
 def plot_precision_recall_curve(true_label, predictions):
@@ -102,10 +99,7 @@ def plot_precision_recall_curve(true_label, predictions):
 	print('Test: f1=%.3f auc=%.3f' % (test_f1, test_auc))
 	# plot the precision-recall curves
 	plt.plot(test_recall, test_precision, marker='.', label='Test')
-	# axis labels
 	plt.xlabel('Recall')
 	plt.ylabel('Precision')
-	# show the legend
 	plt.legend()
-	# show the plot
 	plt.show()
